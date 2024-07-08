@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 16px;
+    background: var(--Green-lighter);
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+:root {
+    /* ### Primary */
+
+    --Green-lighter: hsl(148, 38%, 91%);
+    --Green-medium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 56%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Grey-medium: hsl(186, 15%, 59%);
+    --Grey-darker: hsl(187, 24%, 22%);
+    
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    /* border-radius: 10px; */
+    padding: 1.3rem;
+    background: var(--White);
+}
+
+input ,textarea{
+outline: none;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+input[type = "text"]:invalid  small{
+display: block;
+}
+
+
+.gen {
+    margin-top: 1rem;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin: 0.3rem 0;
+}
+
+small {
+    position: absolute;
+    display: block;
+    /* margin-top: 0.15rem; */
+    color: var(--Red);
+    left: 0;
+    /* top: 12px; */
+}
+
+textarea {
+    width: 100%;
+    padding: 0.8rem 0.1rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.65rem 0.2rem;
+}
+
+.first-div {
+    display: flex;
+    gap: 1em;
+}
+
+.first-div div {
+    width: 100%;
+}
+
+.query-div>div {
+    display: flex;
+    gap: 1.5em;
+}
+
+.query-input {
+    padding: 0.3rem 1.8rem;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 5px;
+}
+
+.radio-btn {
+    accent-color: var(--Grey-medium);
+}
+
+.btn {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border: 0;
+    border-radius: 5px;
+    background: var(--Green-medium);
+    color: var(--White);
+    cursor: pointer;
+    animation: presss linear forwards ease-in-out 2s;
+}
+
+
+@keyframes presss{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        /* transform: translateX(100px); */
+        transform: rotateX(200deg);
+
+    }
+}
+
+.suc-div{
+    display: none;
+    position: absolute;
+    top: 0;
+    color: var(--White);
+    background: var(--Grey-darker);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.suc-div div{
+    display: flex;
+    gap: 0.5em;
+}
+
+.suc-div figure{
+/* border-radius: 100%; */
+}
+
+@media(max-width: 500px){
+.first-div, .query-div>div{
+    flex-direction: column;
+}
+.first-div{
+    gap: 0;
+}
+}
+
+
+
