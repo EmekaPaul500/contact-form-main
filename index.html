@@ -15,6 +15,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      
     }
 
     .attribution a {
@@ -39,7 +40,7 @@
 
   <main>
     <h2>Contact Us</h2>
-    <form method="post">
+    <form>
       <div class="first-div">
         <div class="gen">
           <label for="">First Name</label>
@@ -71,19 +72,19 @@
             Support Request
           </div>
         </div>
-        <small> Please select a query type</small>
+        <!-- <small> Please select a query type</small> -->
       </div>
 
       <div class="gen">
         <label for="">Message</label>
-        <textarea name="" id="" required></textarea>
-        <small>This field is required</small>
+        <textarea name="" id="" required class="message"></textarea>
+        <small class="messageSmall"></small>
       </div>
 
       <div class="gen">
         <input type="checkbox" name="checkbox" required>
         I consent to being contacted by the team
-        <small>To submit this form, please consent to being contacted</small>
+        <!-- <small>To submit this form, please consent to being contacted</small> -->
       </div>
       <button class="btn">Submit</button>
     </form>
